@@ -1,4 +1,4 @@
-package InternProject;
+package InternProject.StudentMangement;
 
 public class partTimeStudents extends GeneralStudent {
     int level;

@@ -1,4 +1,4 @@
-package InternProject;
+package InternProject.StudentMangement;
 
 public class GeneralStudent {
     int studentId;
