@@ -1,16 +1,15 @@
-package InternProject.StudentMangement;
+package InternProject.studentmanagement;
 
-public class partTimeStudents extends GeneralStudent {
-    int level;
-    boolean workStatus;
+public class PartTimeStudents extends Student {
+    private int level;
+    private boolean workStatus;
 
-    public partTimeStudents(int id, String firstname, String lastname, String courses,int level, boolean workStatus) {
+    public PartTimeStudents(int id, String firstname, String lastname, String courses, int level, boolean workStatus) {
         super(id, firstname, lastname, courses);
         this.level = level;
         this.workStatus = workStatus;
     }
-    public void getDetails(){
-        System.out.println(this.firstName);
+    public void printDetails(){
         System.out.println(this.firstName);
         System.out.println(this.lastName);
         System.out.println(this.courses);

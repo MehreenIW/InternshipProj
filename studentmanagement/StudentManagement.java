@@ -1,8 +1,10 @@
-package InternProject.StudentMangement;
+package InternProject.studentmanagement;
 
-import java.util.*;
+import java.util.Scanner;
+import java.util.HashMap;
 
-public class Main {
+
+public class StudentManagement {
 
     public static void main(String[] args) {
         HashMap<Integer, String> studentMap = new HashMap<>();
@@ -10,7 +12,7 @@ public class Main {
         while (cond) {
             System.out.println("Choose the option :");
             System.out.println("0 - Exit ");
-            System.out.println("1 -Add New Student");
+            System.out.println("1 - Add New Student");
             System.out.println("2 - List Students :");
             System.out.println("3 - View Student Details :");
             System.out.println("4 - Delete Student:");
@@ -31,7 +33,7 @@ public class Main {
                      System.out.println("Last Name : ");
                      String lastname = keyboard.nextLine();
 
-                     System.out.println("Courses (max 4) : ");
+                     System.out.println("Course: ");
                      String courses = keyboard.nextLine();
 
                     System.out.println("Enter 1 for Full-time and 2 for Part-time : ");
@@ -43,7 +45,7 @@ public class Main {
 
                              System.out.println("Year : ");
                             int year = keyboard.nextInt();
-                            GeneralStudent newStudent = new fullTimeStudents(newId, firstname, lastname, courses, hostelName, year);
+                            Student newStudent = new FullTimeStudents(newId, firstname, lastname, courses, hostelName, year);
                             studentMap.put(newId, firstname + " " + lastname + " " + courses + " " + hostelName + " " + year);
 
                         }
@@ -54,7 +56,7 @@ public class Main {
                              System.out.println("Working (True/False): ");
                              boolean working = keyboard.nextBoolean();
 
-                            GeneralStudent newStudent = new partTimeStudents(newId, firstname, lastname, courses, level, working);
+                            Student newStudent = new PartTimeStudents(newId, firstname, lastname, courses, level, working);
                             studentMap.put(newId, firstname + " " + lastname + " " + courses + " " + level + " " + working);
 
                         }
