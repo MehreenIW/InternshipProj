@@ -11,6 +11,7 @@ public class StudentManagement {
 //    static Scanner keyboard = new Scanner(System.in);
 
     public static void printMenu(){
+        
         System.out.println("Choose the option :");
         System.out.println("0 - Exit ");
         System.out.println("1 - Add New Student");
@@ -20,10 +21,12 @@ public class StudentManagement {
     }
 
     public static Scanner getScanner(){
+        
         Scanner keyboard = new Scanner(System.in);
         return keyboard;
     }
     public static void exitMenu(){
+        
         System.exit(0);
     }
 
@@ -63,6 +66,7 @@ public class StudentManagement {
             studentMap.put(newId, "First Name: "+ firstname + " " +"Last Name: "+ lastname + " " + "Course: "+ Arrays.toString(courses) + " " +"Hostel Name: "+ hostelName + " " +"Year: "+ year);
 
         } else {
+            
             System.out.println("Level : ");
             int level = keyboard.nextInt();
 
@@ -77,16 +81,19 @@ public class StudentManagement {
     }
 
     public static  void listStudents(){
+        
         System.out.println("List of Students :");
         System.out.println(studentMap);
     }
 
     public static  void getStudent(Scanner keyboard){
+        
        System.out.println("Enter the id of the student to get details : ");
         int findId = keyboard.nextInt();
         System.out.println(studentMap.get(findId));
     }
     public static  void delStudent(Scanner keyboard){
+        
         System.out.println("Enter the id of the student : ");
         int delId = keyboard.nextInt();
         System.out.println(studentMap.remove(delId));
@@ -98,7 +105,8 @@ public class StudentManagement {
 
         boolean cond = true;
         do {
-           printMenu();
+            
+            printMenu();
             Scanner keyboard = getScanner();
             int userInput = keyboard.nextInt();
             switch (userInput) {
@@ -107,9 +115,8 @@ public class StudentManagement {
                 case 2 -> listStudents();
                 case 3 -> getStudent(keyboard);
                 case 4 -> delStudent(keyboard);
-
-            }
-        }while (cond);
+                }
+        } while (cond);
 
     }
 }
