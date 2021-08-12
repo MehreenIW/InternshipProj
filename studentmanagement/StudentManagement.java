@@ -44,7 +44,7 @@ public class StudentManagement {
         System.out.println("Last Name : ");
         String lastname = keyboard.nextLine();
 
-        System.out.println("Course: ");
+        System.out.println("Courses (max 4): ");
         String[] courses = new String[4];
             for(int j = 0; j < courses.length;j++)
             {
@@ -63,7 +63,7 @@ public class StudentManagement {
             int year = keyboard.nextInt();
 
             Student newStudent = new FullTimeStudents(newId, firstname, lastname, courses, hostelName, year);
-            studentMap.put(newId, "First Name: "+ firstname + " " +"Last Name: "+ lastname + " " + "Course: "+ Arrays.toString(courses) + " " +"Hostel Name: "+ hostelName + " " +"Year: "+ year);
+            studentMap.put(newId, "First Name: "+ firstname + " " +"Last Name: "+ lastname + " " + "Courses: "+ Arrays.toString(courses) + " " +"Hostel Name: "+ hostelName + " " +"Year: "+ year);
 
         } else {
             
