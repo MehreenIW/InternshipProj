@@ -9,7 +9,8 @@ public class PartTimeStudents extends Student {
         this.level = level;
         this.workStatus = workStatus;
     }
-    public void printDetails(){
+
+    public void printDetails() {
         System.out.println(this.firstName);
         System.out.println(this.lastName);
         System.out.println(this.courses);
