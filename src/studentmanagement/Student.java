@@ -1,4 +1,4 @@
-package InternProject.studentmanagement;
+package InternProject.src.studentmanagement;
 
 public class Student {
     protected int studentId;

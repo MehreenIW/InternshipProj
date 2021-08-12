@@ -1,4 +1,4 @@
-package InternProject.studentmanagement;
+package InternProject.src.studentmanagement;
 
 import java.util.Scanner;
 import java.util.HashMap;

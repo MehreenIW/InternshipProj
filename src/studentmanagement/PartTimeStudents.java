@@ -1,4 +1,4 @@
-package InternProject.studentmanagement;
+package InternProject.src.studentmanagement;
 
 public class PartTimeStudents extends Student {
     private int level;

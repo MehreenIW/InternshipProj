@@ -1,4 +1,4 @@
-package InternProject.studentmanagement;
+package InternProject.src.studentmanagement;
 
 public class FullTimeStudents extends Student {
     private String hostelName;
