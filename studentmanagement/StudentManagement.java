@@ -9,6 +9,25 @@ public class StudentManagement {
 
     final static HashMap<Integer, String> studentMap = new HashMap<>();
 //    static Scanner keyboard = new Scanner(System.in);
+    public static void main(String[] args) {
+
+        boolean cond = true;
+        do {
+
+            printMenu();
+            Scanner keyboard = getScanner();
+            int userInput = keyboard.nextInt();
+            switch (userInput) {
+                case 0 -> exitMenu();
+                case 1 -> addNewStudent(keyboard);
+                case 2 -> listStudents();
+                case 3 -> getStudent(keyboard);
+                case 4 -> deleteStudent(keyboard);
+            }
+        } while (cond);
+
+    }
+
 
     public static void printMenu(){
         
@@ -21,9 +40,8 @@ public class StudentManagement {
     }
 
     public static Scanner getScanner(){
-        
-        Scanner keyboard = new Scanner(System.in);
-        return keyboard;
+
+        return new Scanner(System.in);
     }
     public static void exitMenu(){
         
@@ -92,7 +110,7 @@ public class StudentManagement {
         int findId = keyboard.nextInt();
         System.out.println(studentMap.get(findId));
     }
-    public static  void delStudent(Scanner keyboard){
+    public static  void deleteStudent(Scanner keyboard){
         
         System.out.println("Enter the id of the student : ");
         int delId = keyboard.nextInt();
@@ -101,24 +119,7 @@ public class StudentManagement {
     }
 
 
-    public static void main(String[] args) {
 
-        boolean cond = true;
-        do {
-            
-            printMenu();
-            Scanner keyboard = getScanner();
-            int userInput = keyboard.nextInt();
-            switch (userInput) {
-                case 0 -> exitMenu();
-                case 1 -> addNewStudent(keyboard);
-                case 2 -> listStudents();
-                case 3 -> getStudent(keyboard);
-                case 4 -> delStudent(keyboard);
-                }
-        } while (cond);
-
-    }
 }
 
 
