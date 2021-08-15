@@ -1,4 +1,6 @@
-package InternProject.studentmanagement;
+package InternProject.com.example.studentmanagement;
+
+import java.util.Arrays;
 
 public class Student {
     protected int studentId;
@@ -8,6 +10,16 @@ public class Student {
 
     public void setStudentId(int studentId) {
         this.studentId = studentId;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "studentId=" + studentId +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", courses=" + Arrays.toString(courses) +
+                '}';
     }
 
     public void setFirstName(String firstName) {

@@ -1,14 +1,17 @@
-package InternProject.studentmanagement;
+package InternProject.com.example.studentmanagement;
 
-import java.util.Arrays;
+import InternProject.com.example.studentmanagement.repository.StudentRepository;
+import InternProject.com.example.studentmanagement.repository.StudentRepositoryFactory;
+
+
 import java.util.Scanner;
-import java.util.HashMap;
+
 
 
 public class StudentManagement {
 
-    final static HashMap<Integer, String> studentMap = new HashMap<>();
-//    static Scanner keyboard = new Scanner(System.in);
+    private final static StudentRepository studentRepo = StudentRepositoryFactory.getStudentRepository();
+
     public static void main(String[] args) {
 
         boolean cond = true;
@@ -80,10 +83,12 @@ public class StudentManagement {
             System.out.println("Year : ");
             int year = keyboard.nextInt();
 
-            Student newStudent = new FullTimeStudents(newId, firstname, lastname, courses, hostelName, year);
-            studentMap.put(newId, "First Name: "+ firstname + " " +"Last Name: "+ lastname + " " + "Courses: "+ Arrays.toString(courses) + " " +"Hostel Name: "+ hostelName + " " +"Year: "+ year);
 
-        } else {
+            Student newStudent = new FullTimeStudents(newId, firstname, lastname, courses, hostelName, year);
+            System.out.println(newStudent);
+            studentRepo.addStudent(newStudent);
+        }
+        else {
             
             System.out.println("Level : ");
             int level = keyboard.nextInt();
@@ -92,8 +97,8 @@ public class StudentManagement {
             boolean working = keyboard.nextBoolean();
 
             Student newStudent = new PartTimeStudents(newId, firstname, lastname, courses, level, working);
-            studentMap.put(newId, "First Name: "+ firstname + " " +"Last Name: "+  lastname + " " + "Course: "+ Arrays.toString(courses) + " " + "Level: "+ level + " " +"Work Status: "+  working);
-
+            System.out.println(newStudent);
+            studentRepo.addStudent(newStudent);
         }
         System.out.println("Record added successfully");
     }
@@ -101,20 +106,20 @@ public class StudentManagement {
     public static  void listStudents(){
         
         System.out.println("List of Students :");
-        System.out.println(studentMap);
+        studentRepo.listStudent();
     }
 
     public static  void getStudent(Scanner keyboard){
         
        System.out.println("Enter the id of the student to get details : ");
         int findId = keyboard.nextInt();
-        System.out.println(studentMap.get(findId));
+        System.out.println(studentRepo.getStudent(findId));
     }
     public static  void deleteStudent(Scanner keyboard){
         
         System.out.println("Enter the id of the student : ");
         int delId = keyboard.nextInt();
-        System.out.println(studentMap.remove(delId));
+        studentRepo.deleteStudentId(delId);
         System.out.println("Record deleted successfully");
     }
 
