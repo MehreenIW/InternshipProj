@@ -1,17 +1,16 @@
-package InternProject.com.example.studentmanagement;
+package com.example.studentmanagement;
 
 import java.util.Arrays;
 
 public class PartTimeStudents extends Student {
-    
+
     private int level;
     private boolean workStatus;
 
 
+    public PartTimeStudents(int id, String firstName, String lastName, String[] courses, int level, boolean workStatus) {
 
-    public PartTimeStudents(int id, String firstname, String lastname, String[] courses, int level, boolean workStatus) {
-        
-        super(id, firstname, lastname, courses);
+        super(id, firstName, lastName, courses);
         this.level = level;
         this.workStatus = workStatus;
     }
@@ -22,7 +21,7 @@ public class PartTimeStudents extends Student {
         return "PartTimeStudent : {" +
                 "Student Id =" + studentId +
                 ", First Name ='" + firstName +
-                ", Last Name ='" + lastName+
+                ", Last Name ='" + lastName +
                 ", Level ='" + level + '\'' +
                 ", Working ='" + workStatus + '\'' +
                 ", Courses =" + Arrays.toString(courses) +

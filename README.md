@@ -1,1 +1,1 @@
-# InternshipProj
+# Student-management-project

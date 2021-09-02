@@ -1,11 +1,21 @@
-package InternProject.com.example.studentmanagement;
+package com.example.studentmanagement;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import java.util.Arrays;
 
+@JsonPropertyOrder({"studentId", "fname", "lname", "courses"})
 public class Student {
+
     protected int studentId;
+
+    @JsonProperty("fname")
     protected String firstName;
+
+    @JsonProperty("lname")
     protected String lastName;
+
     protected String[] courses;
 
     public void setStudentId(int studentId) {
@@ -22,11 +32,11 @@ public class Student {
                 '}';
     }
 
-    public void setFirstName(String firstName) {
+    public void setfirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    public void setLastName(String lastName) {
+    public void setlastName(String lastName) {
         this.lastName = lastName;
     }
 
@@ -38,11 +48,11 @@ public class Student {
         return studentId;
     }
 
-    public String getFirstName() {
+    public String getfirstName() {
         return firstName;
     }
 
-    public String getLastName() {
+    public String getlastName() {
         return lastName;
     }
 
@@ -50,11 +60,11 @@ public class Student {
         return courses;
     }
 
-    public Student(int id, String firstname, String lastname, String[] courses) {
+    public Student(int id, String firstName, String lastName, String[] courses) {
         {
             this.studentId = id;
-            this.firstName = firstname;
-            this.lastName = lastname;
+            this.firstName = firstName;
+            this.lastName = lastName;
             this.courses = courses;
         }
 

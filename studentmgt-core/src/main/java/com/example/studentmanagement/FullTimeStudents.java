@@ -1,10 +1,10 @@
-package InternProject.com.example.studentmanagement;
+package com.example.studentmanagement;
 
 import java.util.Arrays;
 
 public class FullTimeStudents extends Student {
-    
-    private String hostelName;
+
+    private String hostelastName;
     private int year;
 
     @Override
@@ -13,25 +13,25 @@ public class FullTimeStudents extends Student {
                 " Student Id =" + studentId +
                 ", First Name ='" + firstName + '\'' +
                 ", Last Name ='" + lastName + '\'' +
-                ",Hostel Name='" + hostelName + '\'' +
+                ",Hostel Name='" + hostelastName + '\'' +
                 ", Year =" + year +
                 ", Courses =" + Arrays.toString(courses) +
                 '}';
     }
 
-    public FullTimeStudents(int id, String firstname, String lastname, String[] courses, String hostelName, int year) {
-        
-        super(id, firstname, lastname, courses);
-        this.hostelName = hostelName;
+    public FullTimeStudents(int id, String firstName, String lastName, String[] courses, String hostelastName, int year) {
+
+        super(id, firstName, lastName, courses);
+        this.hostelastName = hostelastName;
         this.year = year;
     }
 
-    public String getHostelName() {
-        return hostelName;
+    public String getHostelastName() {
+        return hostelastName;
     }
 
-    public void setHostelName(String hostelName) {
-        this.hostelName = hostelName;
+    public void setHostelastName(String hostelastName) {
+        this.hostelastName = hostelastName;
     }
 
     public int getYear() {
