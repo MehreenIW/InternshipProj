@@ -4,34 +4,35 @@ import java.util.Arrays;
 
 public class FullTimeStudents extends Student {
 
-    private String hostelastName;
+    private String hostelName;
     private int year;
 
     @Override
     public String toString() {
         return "FullTimeStudent : {" +
-                " Student Id =" + studentId +
+                "  Student Id =" + studentId +
                 ", First Name ='" + firstName + '\'' +
                 ", Last Name ='" + lastName + '\'' +
-                ",Hostel Name='" + hostelastName + '\'' +
+                ", Hostel Name='" + hostelName + '\'' +
                 ", Year =" + year +
+                ", Student-type="+ Studenttype.Fulltime +
                 ", Courses =" + Arrays.toString(courses) +
                 '}';
     }
 
-    public FullTimeStudents(int id, String firstName, String lastName, String[] courses, String hostelastName, int year) {
+    public FullTimeStudents(int id, String firstName, String lastName, String[] courses,Studenttype studenttype, String hostelName, int year) {
 
-        super(id, firstName, lastName, courses);
-        this.hostelastName = hostelastName;
+        super(id, firstName, lastName, courses,studenttype);
+        this.hostelName = hostelName;
         this.year = year;
     }
 
-    public String getHostelastName() {
-        return hostelastName;
+    public String getHostelName() {
+        return hostelName;
     }
 
-    public void setHostelastName(String hostelastName) {
-        this.hostelastName = hostelastName;
+    public void setHostelName(String hostelName) {
+        this.hostelName = hostelName;
     }
 
     public int getYear() {

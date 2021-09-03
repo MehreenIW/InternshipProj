@@ -8,9 +8,9 @@ public class PartTimeStudents extends Student {
     private boolean workStatus;
 
 
-    public PartTimeStudents(int id, String firstName, String lastName, String[] courses, int level, boolean workStatus) {
+    public PartTimeStudents(int id, String firstName, String lastName, String[] courses,Studenttype studenttype, int level, boolean workStatus) {
 
-        super(id, firstName, lastName, courses);
+        super(id, firstName, lastName, courses,studenttype);
         this.level = level;
         this.workStatus = workStatus;
     }
@@ -18,12 +18,14 @@ public class PartTimeStudents extends Student {
 
     @Override
     public String toString() {
+        Studenttype studenttype = Studenttype.Parttime;
         return "PartTimeStudent : {" +
                 "Student Id =" + studentId +
                 ", First Name ='" + firstName +
                 ", Last Name ='" + lastName +
                 ", Level ='" + level + '\'' +
                 ", Working ='" + workStatus + '\'' +
+                ", Student-type="+ studenttype +
                 ", Courses =" + Arrays.toString(courses) +
                 '}';
     }

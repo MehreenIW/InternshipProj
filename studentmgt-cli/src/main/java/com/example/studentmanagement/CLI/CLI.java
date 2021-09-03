@@ -43,10 +43,10 @@ public class CLI {
         }
 
         System.out.println("Enter 1 for Full-time and 2 for Part-time : ");
-        int type = keyboard.nextInt();
+        String type = keyboard.nextLine();
         keyboard.nextLine();
 
-        if (type == 1) {
+        if (type == "Fulltime" ) {
             System.out.println("Hostel Name : ");
             String hostelName = keyboard.nextLine();
 
