@@ -47,7 +47,7 @@ public class CLI {
         keyboard.nextLine();
 
         if (type == 1 ) {
-            Student.Studenttype student = Student.Studenttype.Fulltime;
+//            Student.Studenttype student = Student.Studenttype.Fulltime;
             System.out.println("Hostel Name : ");
             String hostelName = keyboard.nextLine();
 
@@ -55,17 +55,17 @@ public class CLI {
             int year = keyboard.nextInt();
 
 
-            return new FullTimeStudents(newId, firstname, lastname, courses, student, hostelName, year);
+            return new FullTimeStudents(newId, firstname, lastname, courses, Student.Studenttype.Fulltime, hostelName, year);
 
         } else {
-            Student.Studenttype student = Student.Studenttype.Parttime;
+//            Student.Studenttype student = Student.Studenttype.Parttime;
             System.out.println("Level : ");
             int level = keyboard.nextInt();
 
             System.out.println("Working (True/False): ");
             boolean working = keyboard.nextBoolean();
 
-            return new PartTimeStudents(newId, firstname, lastname, courses,student, level, working);
+            return new PartTimeStudents(newId, firstname, lastname, courses,Student.Studenttype.Parttime, level, working);
         }
 
     }

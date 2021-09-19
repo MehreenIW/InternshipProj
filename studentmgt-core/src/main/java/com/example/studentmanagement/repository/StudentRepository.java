@@ -1,9 +1,9 @@
 package com.example.studentmanagement.repository;
 
 import com.example.studentmanagement.Student;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
 
 public interface StudentRepository {
     public Student addStudent(Student newStudent);

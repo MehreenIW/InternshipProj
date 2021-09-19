@@ -4,13 +4,11 @@ import com.example.studentmanagement.CLI.CLI;
 import com.example.studentmanagement.Student;
 import com.example.studentmanagement.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Scanner;
 
 @Service
-@Profile("cli")
 public class CLIStudentManagementService implements StudentManagementService {
 
     @Autowired
@@ -26,7 +24,11 @@ public class CLIStudentManagementService implements StudentManagementService {
 
             handlePrintMenu();
             Scanner keyboard = getScanner();
-            int userInput = keyboard.nextInt();
+            int userInput;
+            if (keyboard.hasNextInt())
+                 userInput = keyboard.nextInt();
+            else
+                userInput = 0;
             switch (userInput) {
                 case 0 -> exitMenu();
                 case 1 -> handleNewStudent();
