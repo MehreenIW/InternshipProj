@@ -1,0 +1,4 @@
+com\example\studentmanagement\service\StudentManagementService.class
+com\example\studentmanagement\CLI\CLI.class
+com\example\studentmanagement\service\CLIStudentManagementService.class
+com\example\studentmanagement\Application.class
