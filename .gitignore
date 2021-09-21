@@ -24,3 +24,6 @@ hs_err_pid*
 
 .mvn/wrapper/
 .idea/
+*/src/main/resources
+*/target
+
