@@ -1,7 +1,0 @@
-com\example\studentmanagement\FullTimeStudents.class
-com\example\studentmanagement\PartTimeStudents.class
-com\example\studentmanagement\repository\InMemoryStudentRepository.class
-com\example\studentmanagement\Student.class
-com\example\studentmanagement\repository\StudentRepository.class
-com\example\studentmanagement\repository\DBStudentRepository.class
-com\example\studentmanagement\Student$Studenttype.class
